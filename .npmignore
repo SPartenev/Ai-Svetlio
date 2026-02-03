@@ -1,0 +1,54 @@
+# Source files (dist/ is enough)
+src/
+*.ts
+!dist/**/*.ts
+
+# Development files
+tsconfig.json
+.gitignore
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment
+.env
+.env.local
+
+# Test
+coverage/
+*.tmp
+*.temp
+
+# Project memory (not needed in npm package)
+.memory/
+.antigravity/
+.cursorrules
+CLAUDE.md
+
+# Large files - PDFs
+Progres/
+documents/*.pdf
+*.pdf
+
+# Duplicate source files in root
+cli.ts
+memory.ts
+modes.ts
+
+# Keep only essential files:
+# - dist/ (compiled code)
+# - package.json
+# - README.md
+# - documents/*.md (documentation, no PDFs)
+# - registry.yaml
