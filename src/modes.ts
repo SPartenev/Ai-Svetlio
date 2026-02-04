@@ -1,6 +1,6 @@
 /**
- * Svet_AI - Modes Module
- * 
+ * AI_Svetlio - Modes Module
+ *
  * Управлява различните режими на работа:
  * - NORMAL: Стандартна работа
  * - REPAIR: Поправки с backup и одобрение
@@ -146,7 +146,7 @@ export class Modes {
     }
     
     console.log(chalk.green('\n✅ ONBOARD завършен!'));
-    console.log(chalk.gray('Проектът е готов за работа със Svet_AI.\n'));
+    console.log(chalk.gray('Проектът е готов за работа с AI_Svetlio.\n'));
   }
   
   private async scanProject(): Promise<ProjectAnalysis> {
@@ -335,7 +335,7 @@ ${analysis.frameworks.map(f => `- ${f}`).join('\n') || '- Няма frameworks'}
 ## Езици
 ${analysis.languages.map(l => `- ${l}`).join('\n') || '- Неопределени'}
 
-## Svet_AI инструменти
+## AI_Svetlio инструменти
 - [ ] Добави препоръчани инструменти
 
 `;
@@ -368,7 +368,7 @@ ${analysis.issues.map(i => `- [ ] ${i}`).join('\n')}
     await this.memory.updateState({
       status: 'Onboarded',
       currentTask: 'Готов за работа',
-      context: `Проектът е анализиран и вкаран в Svet_AI системата. Тип: ${analysis.type}. Frameworks: ${analysis.frameworks.join(', ') || 'няма'}.`,
+      context: `Проектът е анализиран и вкаран в AI_Svetlio системата. Тип: ${analysis.type}. Frameworks: ${analysis.frameworks.join(', ') || 'няма'}.`,
       nextStep: 'Опиши какво искаш да направиш с проекта.'
     });
     
@@ -393,7 +393,7 @@ ${analysis.issues.map(i => `- [ ] ${i}`).join('\n')}
       suggestions.push('Добави .gitignore файл');
     }
     
-    // Svet_AI инструменти
+    // AI_Svetlio инструменти
     if (analysis.type === 'backend' || analysis.type === 'fullstack') {
       suggestions.push('Разгледай FastMCP за създаване на MCP сървър към този проект');
     }
@@ -416,11 +416,11 @@ ${analysis.issues.map(i => `- [ ] ${i}`).join('\n')}
     const architecture = await this.memory.readFile('ARCHITECTURE.md') || '';
     const tools = await this.memory.readFile('TOOLS.md') || '';
     
-    const rules = `# Svet_AI - Правила за този проект
+    const rules = `# AI_Svetlio - Правила за този проект
 
 ## 🧠 Памет на проекта
 
-Проектът използва Svet_AI. Паметта е в \`.memory/\` папката.
+Проектът използва AI_Svetlio. Паметта е в \`.memory/\` папката.
 
 ### ВИНАГИ първо прочети:
 \`\`\`

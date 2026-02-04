@@ -1,11 +1,11 @@
 # Архитектура на проекта
 
-## Проект: svet-ai
+## Проект: ai-svetlio
 
 ## Структура
 ```
-svet-ai/
-├── .memory/          ← Svet_AI памет
+ai-svetlio/
+├── .memory/          ← AI_Svetlio памет
 ├── src/              ← Код (ако има)
 └── ...
 ```

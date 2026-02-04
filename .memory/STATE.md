@@ -1,31 +1,26 @@
 # Състояние на проекта
 
-## Проект: svet-ai
+## Проект: ai-svetlio
 
 ## Текущо състояние
-- **Статус:** v1.1.0 готова за npm publish
-- **Последна сесия:** 2026-02-03
-- **Текуща задача:** Публикуване в npm (по преценка на потребителя)
+- **Статус:** ✅ v1.3.0 - ребрандиране
+- **Последна сесия:** 2026-02-04
+- **Текуща задача:** Преименуване от svet-ai към ai-svetlio
 
-## Контекст
-v1.1.0 включва Iron Rules — 11 задължителни правила за AI агенти:
-- Интегрирани в CLAUDE.md, .cursorrules, .antigravity/rules.md шаблоните
-- Context Refresh протокол (на всеки ~20 съобщения)
-- Backup First правило
-- Big Task Protocol (>150 реда → план първо)
+## Версия: 1.3.0
 
-## Завършено
-- [x] Документация: IRON_RULES.md, USER_GUIDE.md, REFRESH_REMINDER.md
-- [x] Backup на v1.0.0 код
-- [x] Обновен cli.ts с Iron Rules
-- [x] Обновен package.json → 1.1.0
-- [x] Записано в .memory/
-- [x] npm run build — успешен
-- [x] svet init тест — CLAUDE.md съдържа Iron Rules ✅
+## Какво включва текущата версия
+- **v1.0.0:** Базова функционалност, .memory/ система
+- **v1.1.0:** Iron Rules (11 правила за AI агенти), Context Refresh, Big Task Protocol
+- **v1.2.0:** MCP Registry интеграция (16,000+ сървъра), `svetlio tools add/remove/info`
+- **v1.2.1:** Документация за безопасно обновяване в USER_GUIDE.md
+- **v1.3.0:** Ребрандиране от svet-ai към ai-svetlio
+
+## Публикувано
+- ⏳ npm: ai-svetlio@1.3.0 (предстои)
+- ⏳ GitHub: github.com/SPartenev/Ai-Svetlio (предстои)
 
 ## Следваща стъпка
-Когато решиш, изпълни:
-```bash
-npm publish
-```
-Това ще публикува v1.1.0 в npm registry.
+1. Build и тест
+2. Publish на npm
+3. Преименуване на GitHub repo

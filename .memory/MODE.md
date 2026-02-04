@@ -12,9 +12,9 @@
 
 | Команда | Режим | Описание |
 |---------|-------|----------|
-| `svet repair` | REPAIR | Backup + одобрение на всяка стъпка |
-| `svet onboard` | ONBOARD | Дълбок анализ на съществуващ проект |
-| `svet analyze` | ANALYZE | Дълбок анализ за EXTEND/REWRITE |
+| `svetlio repair` | REPAIR | Backup + одобрение на всяка стъпка |
+| `svetlio onboard` | ONBOARD | Дълбок анализ на съществуващ проект |
+| `svetlio analyze` | ANALYZE | Дълбок анализ за EXTEND/REWRITE |
 
 ## История на режимите
 - 2026-02-01 10:56: NORMAL (инициализация)

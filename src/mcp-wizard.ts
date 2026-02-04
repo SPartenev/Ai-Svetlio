@@ -1,6 +1,6 @@
 /**
- * Svet_AI - MCP Wizard
- * 
+ * AI_Svetlio - MCP Wizard
+ *
  * Интерактивен помощник за избор и създаване на MCP сървъри
  */
 

@@ -1,5 +1,5 @@
 /**
- * Svet_AI - Tools Module v1.2.0
+ * AI_Svetlio - Tools Module v1.3.0
  *
  * Управлява каталога с инструменти и MCP Registry интеграция
  * - Вграден каталог с проверени инструменти
@@ -23,7 +23,7 @@ export class Tools {
 
   constructor(projectDir?: string) {
     const homeDir = process.env.HOME || process.env.USERPROFILE || '~';
-    this.registryPath = path.join(homeDir, '.svet-ai', 'registry.yaml');
+    this.registryPath = path.join(homeDir, '.ai-svetlio', 'registry.yaml');
     this.projectToolsPath = projectDir
       ? path.join(projectDir, '.memory', 'TOOLS.md')
       : path.join(process.cwd(), '.memory', 'TOOLS.md');
@@ -74,10 +74,10 @@ export class Tools {
     console.log(chalk.cyan('\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━'));
     console.log(chalk.gray('\n● Високо доверие  ● Средно доверие  ● Ниско доверие'));
     console.log(chalk.gray('\nКоманди:'));
-    console.log(chalk.gray('  svet tools add <id>      Добави инструмент към проекта'));
-    console.log(chalk.gray('  svet tools info <id>     Покажи детайли за инструмент'));
-    console.log(chalk.gray('  svet tools remove <id>   Премахни от проекта'));
-    console.log(chalk.gray('  svet registry search <q> Търси в MCP Registry (16,000+ сървъра)\n'));
+    console.log(chalk.gray('  svetlio tools add <id>      Добави инструмент към проекта'));
+    console.log(chalk.gray('  svetlio tools info <id>     Покажи детайли за инструмент'));
+    console.log(chalk.gray('  svetlio tools remove <id>   Премахни от проекта'));
+    console.log(chalk.gray('  svetlio registry search <q> Търси в MCP Registry (16,000+ сървъра)\n'));
   }
 
   // =========================================================================
@@ -89,8 +89,8 @@ export class Tools {
 
     if (!tool) {
       console.log(chalk.red(`\n❌ Инструментът "${toolId}" не е намерен в каталога.`));
-      console.log(chalk.gray('Използвай: svet tools за списък с налични инструменти'));
-      console.log(chalk.gray('Или: svet registry search <query> за търсене в MCP Registry\n'));
+      console.log(chalk.gray('Използвай: svetlio tools за списък с налични инструменти'));
+      console.log(chalk.gray('Или: svetlio registry search <query> за търсене в MCP Registry\n'));
       return;
     }
 
@@ -130,7 +130,7 @@ export class Tools {
     }
 
     console.log(chalk.cyan('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━'));
-    console.log(chalk.gray(`\nДобави към проекта: svet tools add ${toolId}\n`));
+    console.log(chalk.gray(`\nДобави към проекта: svetlio tools add ${toolId}\n`));
   }
 
   // =========================================================================
@@ -148,8 +148,8 @@ export class Tools {
     // Провери дали .memory/ съществува
     const memoryDir = path.dirname(this.projectToolsPath);
     if (!await fs.pathExists(memoryDir)) {
-      console.log(chalk.red('\n❌ Проектът не е инициализиран с Svet_AI.'));
-      console.log(chalk.gray('Изпълни: svet init\n'));
+      console.log(chalk.red('\n❌ Проектът не е инициализиран с AI_Svetlio.'));
+      console.log(chalk.gray('Изпълни: svetlio init\n'));
       return false;
     }
 
@@ -185,8 +185,8 @@ ${tool.docs ? `- **Документация:** ${tool.docs}` : ''}
 ${newEntry}
 
 ---
-*Използвай \`svet tools\` за пълен каталог*
-*Използвай \`svet tools add <id>\` за добавяне*
+*Използвай \`svetlio tools\` за пълен каталог*
+*Използвай \`svetlio tools add <id>\` за добавяне*
 `;
     } else {
       // Добави към съществуващия списък
